@@ -1,0 +1,36 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "satern693@gmail.com",
+    "longName": "Pebble",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/pebLogoNonTransparent.png",
+                "name": "IMAGE_LOWD_ICONE",
+                "type": "png"
+            },
+            {
+                "file": "images/LinkedIn.png",
+                "name": "IMAGE_LINKO",
+                "type": "png"
+            },
+            {
+                "file": "images/pebContact.png",
+                "name": "IMAGE_CONTACTO",
+                "type": "png"
+            }
+        ]
+    },
+    "sdkVersion": "2",
+    "shortName": "Pebble",
+    "uuid": "40373c16-6459-4c99-8e54-1ca0c8787df4",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
