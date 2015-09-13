@@ -9,10 +9,16 @@ GBitmap *image;
 static BitmapLayer *image2_layer;
 GBitmap *image2;
 GBitmap *image3;
+GBitmap *image4;
+
 bool mode = true;
 AccelData accel;
 static AppTimer *timer;
 int gameClock = 0;
+
+static void makeConfirmed(){
+  bitmap_layer_set_bitmap(image2_layer, image4);
+}
 
 static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
   //text_layer_set_text(text_layer, "Select");
@@ -25,12 +31,14 @@ static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
 }
 
 static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
+  makeConfirmed();
   text_layer_set_text(text_layer, "Up");
 }
 
 static void down_click_handler(ClickRecognizerRef recognizer, void *context) {
   text_layer_set_text(text_layer, "Down");
 }
+
 
 static void click_config_provider(void *context) {
   window_single_click_subscribe(BUTTON_ID_SELECT, select_click_handler);
@@ -65,6 +73,7 @@ static void window_load(Window *window) {
   image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_LOWD_ICONE);
   image2 = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_CONTACTO);
   image3 = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_LINKO);
+  image4 = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_CHECKMARK);
   image_layer = bitmap_layer_create(bounds);
   image2_layer = bitmap_layer_create(bounds);
   bitmap_layer_set_bitmap(image_layer, image);

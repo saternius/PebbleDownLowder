@@ -9,6 +9,11 @@
     "resources": {
         "media": [
             {
+                "file": "images/checkmark.png",
+                "name": "IMAGE_CHECKMARK",
+                "type": "png"
+            },
+            {
                 "file": "images/pebLogoNonTransparent.png",
                 "name": "IMAGE_LOWD_ICONE",
                 "type": "png"
